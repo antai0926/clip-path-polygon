@@ -1,0 +1,73 @@
+@import '_reset.scss';
+
+@mixin flex-row-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner {
+  width: 100%;
+  height: 509px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../img/banner_back.png');
+  background-size: cover;
+
+  @include flex-row-center;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+
+  .container {
+    width: 360px;
+    color: white;
+    .title {
+      font-size: 3.5rem;
+      font-weight: 700;
+      padding-bottom: 20px;
+      border-bottom: white 1px solid;
+      margin-bottom: 21px;
+    }
+    .description {
+      font-size: 1.25rem;
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+}
+
+.find-remote {
+  width: 100%;
+  height: 150px;
+  padding: 42px 21px;
+  @include flex-row-center;
+  .container {
+    @include flex-column-center;
+    width: 720px;
+    .title {
+      color: black;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 21px;
+    }
+    .description {
+      color: #7c7c7c;
+      font-size: 1.25rem;
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+}
+
+.people {
+  width: 100%;
+  height: 420px;
+  background-image: url('../img/people.png');
+  background-size: cover;
+  clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+}
